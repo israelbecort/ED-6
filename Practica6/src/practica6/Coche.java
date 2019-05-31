@@ -24,13 +24,13 @@ public class Coche {
 		String resultado = "";
 		if (motor == "Gasolina") {
 			resultado += "El coche con matricula " + matricula + " ";
-			resultado += cocheGasolina(modelo, fabricante);
+			resultado += cocheGasolina("Corsa", "Opel");
 		} else if (motor == "Diesel") {
 			resultado += "El coche con matricula " + matricula + " ";
-			resultado += cocheDiesel(modelo, fabricante);
+			resultado += cocheDiesel("Ibiza", "Seat");
 		} else if (motor == "Híbrido") {
 			resultado += "El coche con matricula " + matricula + " ";
-			resultado += cocheHibrido(modelo, fabricante);
+			resultado += cocheHibrido("Getz", "Hyundai");
 		} else {
 			resultado += "El coche con matricula " + matricula + " ";
 			resultado += "no dispone de información";
