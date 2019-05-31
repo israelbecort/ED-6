@@ -1,11 +1,34 @@
 package practica6;
 
+/**
+ * Clase coche.
+ * Contiene la información de los coches, contiene la matrícula, el motor, el modelo y el fabricante.
+ * Además tiene los siguientes métodos:
+ * caracteristicasCoche(), cocheGasolina(), cocheDiesel(), cocheHibrido().
+ * @author Israel Becerra
+ * @version 1.1
+ */
 public class Coche {
+	/**
+	 * Matrícula del coche.
+	 */
 	String matricula;
+	/**
+	 * Tipo de motor.
+	 */
 	String motor;
+	/**
+	 * Modelo del coche.
+	 */
 	String modelo;
+	/**
+	 * Fabricante (marca) del coche.
+	 */
 	String fabricante;
 
+	/**
+	 * Constructor vacío.
+	 */
 	public Coche() {
 		matricula = "";
 		motor = "";
@@ -13,6 +36,13 @@ public class Coche {
 		fabricante = "";
 	}
 
+	/**
+	 * Constructor con parámetros.
+	 * @param m 	//Matrícula del coche.
+	 * @param c 	//Motor del coche
+	 * @param mo 	//Modelo del coche.
+	 * @param f 	//Fabricante del coche.
+	 */
 	public Coche(String m, String c, String mo, String f) {
 		matricula = m;
 		motor = c;
@@ -20,6 +50,10 @@ public class Coche {
 		fabricante = f;
 	}
 
+	/**
+	 * Muestra las características del coche.
+	 * @return //Devuelve el resultado.
+	 */
 	public String caracteristicasCoche() {
 		String resultado = "";
 		if (motor == "Gasolina") {
@@ -38,21 +72,42 @@ public class Coche {
 		return resultado;
 	}
 
+	/**
+	 * Muestra lo el fabricante del coche y el modelo. Tabien muestra lo que cuesta el litro
+	 * de este combustible.
+	 * @param modelo 		//Modelo del coche.
+	 * @param fabricante 	//Fabricante del coche
+	 * @return				//Devuelve el resultado
+	 */
 	private String cocheHibrido(String modelo, String fabricante)
 	{
-		String resultado="es un"+fabricante+modelo+"y gasta 1,337 euros por litro.";
+		String resultado="es un"+fabricante+modelo+"y no necesita combustible.";
 		return resultado;
 	}
 
+	/**
+	 * Muestra lo el fabricante del coche y el modelo. Tabien muestra lo que cuesta el litro
+	 * de este combustible.
+	 * @param modelo 		//Modelo del coche.
+	 * @param fabricante 	//Fabricante del coche
+	 * @return				//Devuelve el resultado
+	 */
 	private String cocheDiesel(String modelo, String fabricante)
 	{
 		String resultado="es un"+fabricante+modelo+"y gasta 1,052 euros por litro.";
 		return resultado;
 	}
 
+	/**
+	 * Muestra lo el fabricante del coche y el modelo. Tabien muestra lo que cuesta el litro
+	 * de este combustible.
+	 * @param modelo 		//Modelo del coche.
+	 * @param fabricante 	//Fabricante del coche
+	 * @return				//Devuelve el resultado
+	 */
 	private String cocheGasolina(String modelo, String fabricante)
 	{
-		String resultado="es un"+fabricante+modelo+"y no necesita combustible.";
+		String resultado="es un"+fabricante+modelo+"y gasta 1,337 euros por litro.";
 		return resultado;
 	}
 }
